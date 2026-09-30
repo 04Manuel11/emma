@@ -1,0 +1,142 @@
+
+
+body{
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-container{
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.Login-text{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Side by side alignment setup */
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+.google, .Apple{
+    background-color: #e4e6eb;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1; /* Makes both items occupy exact equal widths side-by-side */
+    transition: background 0.2s ease;
+}
+
+.google:hover, .Apple:hover {
+    background-color: #d8dadf;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Adds space between the icon graphic and the text label */
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* Middle Line Separator Fixes */
+.login-container .seperator{
+    margin: 1.5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.login-container .seperator::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+.span {
+    background-color: aliceblue; /* Matches base login background color */
+    padding: 0 10px;
+    position: relative;
+    z-index: 2; /* Forces text to sit strictly over top of the line */
+    color: #666;
+}
+
+/* Form Layout Elements */
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    width: 95%;
+}
+
+.input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    
+    outline: none;
+}
+
+.input:active{
+    
+    border: 1px solid blueviolet;
+}
+
+.forgot-text{
+    align-self: flex-start; 
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-btn{
+    color: white;
+    background-color: rgb(23, 0, 128);
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn:hover{
+    background-color: rgb(40, 10, 180);
+    transform: scale(1.02);
+}
+
+h6 {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+h6 a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: bold;
+}
